@@ -26,11 +26,28 @@ body {
     text-decoration: none;
     list-style: auto;
     color: #aaa;
+    border-bottom: solid 2px rgba(0, 0, 0, 0);
+}
+
+.main-nav__items a:hover {
+    border-bottom: solid 2px #aaa;
+}
+
+.main-nav__items a:hover {
+    transform: scale(1.1);
+}
+
+.main-nav__items a {
+    transition: .3s;
+}
+
+.main-nav__items a::before {
+    content: "• ";
 }
 
 .main-nav__item {
     display: inline-flex;
-    margin: 3rem 2rem;
+    margin: 4rem 2rem;
     font-size: 1.3rem;
 }
 
@@ -59,10 +76,40 @@ body {
     font-weight: 100;
 }
 
+.second-icon a {
+    position: absolute;
+    z-index: 1;
+    margin-top: 26rem;
+    padding-left: 42%
+}
+
+
+/* .second-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+} */
+
 .second-info {
     max-width: 34rem;
     margin: 0 4rem;
     line-height: 1.2rem;
+}
+
+.fa-arrow-right {
+    color: #fff;
+    border-radius: .2rem;
+    background-color: #aaa;
+    padding: .8rem .8rem;
+    font-size: 2rem;
+}
+
+.fa-arrow-right {
+    transition: .3s;
+}
+
+.fa-arrow-right:hover {
+    transform: scale(1.1);
 }
 
 .third-section {
@@ -138,6 +185,17 @@ body {
         display: flex;
         align-items: center;
     }
+    .second-icon a {
+        position: absolute;
+        z-index: 1;
+        margin-top: 7rem;
+        padding-left: 92%
+    }
+    /* .second-content {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+    } */
     .second-section h1 {
         font-size: 5rem;
         line-height: 1;
@@ -178,6 +236,7 @@ body {
         width: 100vw;
     }
     .first-info {
+        font-size: .9rem;
         max-width: 30rem;
     }
     .second-section {
@@ -189,8 +248,15 @@ body {
         width: 100vw;
         font-size: 4.5rem;
     }
+    .second-icon a {
+        position: absolute;
+        z-index: 1;
+        margin-top: 8rem;
+        padding-left: 40%
+    }
     .second-info {
         max-width: 30rem;
+        font-size: .9rem;
     }
     .nonex {
         display: none;

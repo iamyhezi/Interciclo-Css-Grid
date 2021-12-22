@@ -12,6 +12,68 @@ body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+.container-loader {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    animation-name: fueraColor;
+    animation-duration: 2.4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+.loader1,
+.loader2,
+.loader3 {
+    width: 14rem;
+    height: 1.4rem;
+    background-color: #aaa;
+    animation-name: cambiarColor;
+    animation-duration: .8s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.loader1 {
+    animation-delay: .6s;
+}
+
+.loader2 {
+    animation-delay: .4s;
+}
+
+.loader3 {
+    animation-delay: .2s;
+}
+
+@keyframes fueraColor {
+    0% {
+        background-color: white;
+    }
+    75% {
+        background-color: white;
+    }
+    100% {
+        background-color: rgba(0, 0, 0, 0);
+    }
+}
+
+@keyframes cambiarColor {
+    0% {
+        width: 14rem;
+    }
+    100% {
+        width: 0;
+    }
+}
+
 .main-nav {
     position: absolute;
     /* display: none; */
